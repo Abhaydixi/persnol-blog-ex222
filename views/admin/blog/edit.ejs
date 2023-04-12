@@ -1,0 +1,76 @@
+<%- include('../../header.ejs') %>
+
+
+    <br><br><br>
+
+    <section class="dashboard-wrap mtb-40">
+        <div class="container">
+            <div class="body-content">
+                <div class="row">
+                    <!--sidebar-->
+                    <div class="col-md-3">
+                        <div class="dash-left">
+                            <ul>
+                                <li class="active ">
+                                    <a href="/admin/dashboard" class="text-decoration-none">Dashboard</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/admin/blogdisplay" class="text-decoration-none">Display Blog</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/admin/category" class="text-decoration-none">Categories</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/admin/contact" class="text-decoration-none">Contact</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/admin/about" class="text-decoration-none">About</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/logout" class="text-decoration-none">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="dash-right">
+                            <div class="dash-header">
+                                <div class="dash-title">
+                                    <h1 style="color: #386576;">Blog Update</h1>
+                                </div>
+
+                            </div>
+                            <form action="/admin/blogupdate/<%= edit._id %>" method="post"
+                                enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="">Title</label>
+                                    <input type="text" class="form-control" name="title" value="<%= edit.title %>">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Discription</label>
+                                    <textarea name="discription" class="form-control" id="" cols="30" rows="10"><%=
+                            edit.description %></textarea>
+                                </div>
+                                <div class="md-3">
+                                    <label for=""> Upload image</label>
+                                    <input type="file" name="image" class="form-control">
+                                </div><br>
+                                <div class="mb-3">
+                                    <img src="<%= edit.image.url %> " width="100px" alt="">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div><!--row end-->
+            </div>
+        </div><!--container end-->
+    </section>
+
+
+
+
+
+
+    <%- include('../../footer.ejs') %>

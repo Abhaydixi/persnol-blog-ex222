@@ -1,0 +1,115 @@
+<%- include('../../header.ejs')  %>
+
+
+<br><br><br>
+
+    
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul >
+                            <li class="active ">
+                                <a href="/admin/dashboard" class="text-decoration-none">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/blogdisplay" class="text-decoration-none">Display Blog</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/category" class="text-decoration-none">Categories</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/contact" class="text-decoration-none">Contact</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/about" class="text-decoration-none">About</a>
+                            </li>
+                            <li class="active">
+                                <a href="/logout" class="text-decoration-none">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                        <div class="dash-header">
+                            <div class="dash-title">
+                                <h1>Create Category</h1>
+                            </div>
+                        </div>
+                        <div class="blog-form">
+                            <form>
+                                <div class="form-group form-row">
+                                    <div class="col-md-3">
+                                        <label>
+                                        Title 
+                                        <span class="required">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="title" placeholder="Title" required>
+                                    </div>
+                                </div>
+                                <div class="form-group form-row">
+                                    <div class="col-md-3">
+                                        <label>
+                                            Description 
+                                        <span class="required">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <textarea rows="5" name="description" class="form-control" placeholder="Description" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group form-row">
+                                    <div class="col-md-3">
+                                        <label>
+                                            Name  
+                                        <span class="required">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input  class="form-control" name="name" placeholder="Enter your Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group form-row">
+                                    <div class="col-md-3">
+                                        <label>
+                                            email 
+                                        <span class="required">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" name="email" placeholder="Enter your Email" required>
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group form-row">
+                                    <div class="col-md-3">
+                                        <label>                                            
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row end-->
+        </div>
+    </div><!--container end-->
+</section>
+
+
+
+
+
+<%- include('../../footer.ejs')  %>
+
+
+
+

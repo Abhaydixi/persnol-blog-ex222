@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.banner{
+    background-image: url(https://personalblogweb-himanshu-v3pu.onrender.com/assets/images/banner2.jpg);
+    width: 100%;
+    height: 680px;
+    background-size: cover;
+    
+}
+.h{
+    text-align: center;
+    margin-top: 33px;
+}
+.im{
+    width: 412px;
+    height: 412px;
+}
+.social-icons a {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    padding: 8px 93px;
+    background: rgb(0, 58, 80);
+}
+
+.mtb-40 {
+    margin: 40px 0;
+    min-height: 450px;
+}
+.blog-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.blog-box h3 {
+    margin: 20px 0;
+    font-size: 22px;
+    color: #000;
+}
+.blog-box p {
+    color: #666;
+
+}
+.btn-danger {
+    color: white;
+    background: orange;
+    padding: 10px 27px;
+    border-radius: 20px;
+    border: 0;
+}
+.weblogo {
+    width: 271px;
+}
+
+.c {
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+.navbar {
+    background-color: #386576;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+.login-wrap {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(https://personalblogweb-himanshu-v3pu.onrender.com/assets/images/photopix.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 850px;
+}
+.login-box {
+    box-shadow: 1px 1px 7px #666;
+    padding: 20px;
+    margin-top: 26%;
+    background: rgb(37, 35, 35);
+}
+
+.ad{
+    text-align: center;
+    color: white;
+}
+.log input[type="password"]{
+    background: rgb(72, 67, 67);
+    color: white;
+    border: 0;
+    outline: 0;
+}
+
+.dash-left {
+    margin-top: 30px;
+}
+.dash-left ul li a.active {
+    background-color: #029477;
+    color: #fff;
+}
+.dash-left ul li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+}
+.dash-left ul li a {
+    color: #333;
+    padding: 5px 15px;
+    display: block;
+}
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+table .table_heading {
+    background-color: #029477;
+    height: 47px;
+    color: white;
+}
+tr td {
+    padding: 12px;
+}
+.btn-info {
+    color: white;
+    background: orange;
+    margin-bottom: 10px;
+    padding: 10px 27px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.reg {
+    color: orange;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin-left: 2px;
+}
+.form-row{
+    display: flex;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.fd{
+    font-size: 2.5rem;
+}
+.img-detail{
+    margin: 40px 0px;
+}
+.rd{
+    display: flex;
+    
+}

@@ -1,0 +1,71 @@
+<%- include('../../header.ejs')  %>
+
+<br><br><br>
+
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul >
+                            <li class="active ">
+                                <a href="/admin/dashboard" class="text-decoration-none">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/blogdisplay" class="text-decoration-none">Display Blog</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/category" class="text-decoration-none">Categories</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/contact" class="text-decoration-none">Contact</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/about" class="text-decoration-none">About</a>
+                            </li>
+                            <li class="active">
+                                <a href="/logout" class="text-decoration-none">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                        <div class="dash-header">
+                            <div class="dash-title">
+                                <h1 style="color: #386576;">View</h1>
+                            </div>                           
+                        </div>
+                        <table class="table-bordered table-striped">
+                            <tbody>
+                                <tr class=" table_heading text-white text-center">
+                                    <th>ID No.</th>
+                                    <th>Title</th>
+                                    <th>Description</th>   
+                                    <th>Image</th>                                   
+                                </tr>
+                                <tr>
+                                        <td><%= view._id %></td>                                          
+                                        
+                                        <td><%= view.title %></td>
+                                           
+                                        <td><%= view.description %></td>      
+                                        <td><img src="<%= view.image.url %>" width="50px" alt=""></td>                                  
+                                    </tr>  
+                                                                  
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div><!--row end-->
+        </div>
+    </div><!--container end-->
+</section>
+
+
+
+
+
+<%- include('../../footer.ejs') %>

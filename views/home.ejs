@@ -1,0 +1,38 @@
+<%- include('./header.ejs') %>
+
+    <section class="banner">
+        <div class="banner-box"></div>
+    </section>
+
+
+    <h1 class="text-center mt-3" style="color: #386576">BLOGS</h1>
+
+
+    <div class="container-fluid roh mt-5">
+        <div class="container">
+            <div class="row kar">
+                <% b.forEach((item)=>{ %>
+                    <div class="col-md-4 text-center">
+                        <img src="<%= item.image.url %>" style="height: 300px; width: 300px" />
+                        <h3 class="blogbox">
+                            <%= item.title %>
+                        </h3>
+                        <p class="per">
+                            <%= item.description.slice(0,110) %>
+                        </p>
+                        <p><span>
+                                <%= item.createdAt.toLocaleDateString() %>
+                            </span></p>
+
+                        <a href="/readmore/<%- item.id %>" class="btn btn-info mt-3">Read more...</a>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+    <br>
+
+  
+
+
+    <%- include('./footer.ejs') %>

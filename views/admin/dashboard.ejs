@@ -1,0 +1,46 @@
+<%- include('../header.ejs')  %>
+
+<br><br><br><br>
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul >
+                            <li class="active ">
+                                <a href="/admin/dashboard" class="text-decoration-none">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/blogdisplay" class="text-decoration-none">Display Blog</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/category" class="text-decoration-none">Categories</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/contact" class="text-decoration-none">Contact</a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/about" class="text-decoration-none">About</a>
+                            </li>
+                            <li class="active">
+                                <a href="/logout" class="text-decoration-none">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                        <h1>Welcome, <%= n %> </h1>
+                        <h3>Your, <%= e %> </h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae magni minima distinctio asperiores animi laborum aperiam nihil assumenda temporibus illum atque labore ut eum neque recusandae quae, eveniet aspernatur possimus.</p>
+                    </div>
+                </div>
+            </div><!--row end-->
+        </div>
+    </div><!--container end-->
+</section>
+
+
+
+<%- include('../footer.ejs')  %>
