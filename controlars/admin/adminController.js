@@ -153,7 +153,7 @@ class adminController {
                             //console.log(token)
                             res.cookie('token', token)
                             req.flash('error', 'please wait for Approved');
-                            res.redirect('/admin/dashboard')
+                            res.redirect('/login')
                         } else if (admin.status == 'Approved') {
                             const token = jwt.sign({ id: admin._id }, 'abhaydixit123')
                             //console.log(token)

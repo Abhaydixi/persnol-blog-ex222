@@ -20,7 +20,7 @@ router.get('/register', FrontController.register)
 router.get('/readmore/:id', FrontController.readmore)
 
 //admin Controller
-router.get('/admin/dashboard', adminController.dashboard)
+router.get('/admin/dashboard', auth, adminController.dashboard)
 router.get('/user', auth, adminController.userdisplay)
 router.post('/adminregister', adminController.register)
 router.post('/verifylogin', adminController.verifylogin)
