@@ -1,9 +1,17 @@
 const CategoryModel = require('../../models/category')
 
-class CategoryController{
+class CategoryController {
 
-    static categoryDisplay=(req,res)=>{
-        res.render('admin/category/catdisplay')
+    static categoryDisplay = (req, res) => {
+        try {
+
+            const { role } = req.admin
+            res.render('admin/category/catdisplay', { role: role })
+
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
 

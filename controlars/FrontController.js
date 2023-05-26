@@ -19,19 +19,33 @@ class FrontController {
     static about = (req, res) => {
         res.render('about')
     }
-    static contact = (req, res) => {
+    static contact = async (req, res) => {
+        try {
+
+            res.render('contact',)
+
+        } catch (error) {
+            console.log(error)
+        }
         res.render('contact')
     }
-    static blog = (req, res) => {
-        res.render('blog')
+    static blog = async (req, res) => {
+        try {
+            const blog = await BlogModel.find()
+            res.render('blog', { b: blog })
+
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
 
     static login = async (req, res) => {
         try {
-            res.render('login', { message: req.flash('error')})
+            res.render('login', { message: req.flash('error') })
         }
-        catch (error){
+        catch (error) {
             console.log(error)
         }
     }
@@ -55,7 +69,7 @@ class FrontController {
             const recentblogs = await BlogModel.find().limit(6)
             const category = await CategoryModel.find()
             res.render('readmore', { d: readmore, r: recentblogs, c: category })
-            console.log(readmore)
+            //console.log(readmore)
         } catch (error) {
             console.log(error)
         }

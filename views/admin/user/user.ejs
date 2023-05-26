@@ -1,0 +1,121 @@
+<%- include('../../header.ejs') %>
+
+    <br><br><br>
+
+    <section class="dashboard-wrap mtb-40">
+        <div class="container">
+            <div class="body-content">
+                <div class="row">
+                    <!--sidebar-->
+                    <div class="col-md-3">
+                        <div class="dash-left text-center">
+                            <ul>
+                                <li class="active bg-dark ">
+                                    <a href="/admin/dashboard" class="text-decoration-none text-white">Dashboard</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/blogdisplay" class="text-decoration-none text-white">Display
+                                        Blog</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/category" class="text-decoration-none text-white">Categories</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/contact" class="text-decoration-none text-white">Contact</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/User" class="text-decoration-none text-white">User</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/about" class="text-decoration-none text-white">About</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/logout" class="text-decoration-none text-white">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="dash-right">
+                            <div class="dash-header">
+                                <div class="dash-title">
+                                    <h1 style="color: #386576;">User Display</h1>
+                                </div>
+
+                            </div>
+                            <table class="table-bordered table-striped">
+                                <tbody>
+                                    <tr class=" table_heading text-white text-center">
+                                        <th>ID No.</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Comment</th>
+                                        <th>Verified</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <% i=1 %>
+                                        <% d.forEach((item)=>{ %>
+
+
+                                            <tr>
+                                                <td>
+                                                    <%= i++ %>
+                                                </td>
+
+                                                <td>
+                                                    <%= item.name %>
+                                                </td>
+
+                                                <td>
+                                                    <%= item.email %>
+                                                </td>
+
+                                                <td>
+                                                    <%= item.phone %>
+                                                </td>
+                                                <td>
+                                                    <%= item.status %>
+                                                </td>
+                                                <td>
+                                                    <form action="/admin/approved/<%= item._id %>" method="post">
+                                                        <textarea type="text" name="Comment"
+                                                            class="form-control"></textarea>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="submit" name="status" value="Approved"
+                                                        class="btn btn-info">Approved</button>
+                                                    <button type="submit" name="status" value="Reject"
+                                                        class="btn btn-danger">Reject</button>
+                                                </td>
+                                                </form>
+
+
+                                                <td class="text-center">
+                                                    <a href="/admin/view/<%= item._id %>"
+                                                        class="btn btn-info btn-sm action-btn">
+                                                        <i class="fa-solid fa-eye"></i>
+                                                    </a>
+
+                                                    <!-- <a href="" class="btn btn-info btn-sm action-btn">
+                                                        <i class="fa-regular fa-pen-to-square"> </i>
+                                                    </a><br> -->
+
+                                                    <a href="/admin/delete/<%= item._id %>" class="btn btn-danger"><i
+                                                            class="fa-solid fa-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div><!--row end-->
+            </div>
+        </div><!--container end-->
+    </section>
+
+    <%- include('../../footer.ejs') %>

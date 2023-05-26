@@ -16,10 +16,12 @@ class blogController {
 
         try {
 
-            const data = await BlogModel.find()
-            console.log(data)
+            const data = await BlogModel.find({ admin_id: req.admin.id });
+            const result = await BlogModel.find();
+            const { role, id } = req.admin;
+            //console.log(data)
 
-            res.render('admin/blog/display', { d: data })
+            res.render('admin/blog/display', { d: data, role: role, r: result });
 
         } catch (error) {
             console.log(error)
@@ -31,12 +33,15 @@ class blogController {
             //console.log(req.body)
 
             const file = req.files.image
+            const id = req.params.id;
+            const { _id } = req.admin;
             const myimage = await cloudinary.uploader.upload(file.tempFilePath, {
                 folder: 'blogImage'
             })
             const result = new BlogModel({
                 title: req.body.title,
                 description: req.body.discription,
+                admin_id: _id,
                 image: {
                     public_id: myimage.public_id,
                     url: myimage.secure_url
@@ -67,8 +72,9 @@ class blogController {
             //console.log(req.params.id)
             const data = await BlogModel.findById(req.params.id)
             //console.log(data)
+            const { role } = req.admin
 
-            res.render('admin/blog/view', { view: data })
+            res.render('admin/blog/view', { view: data, role: role })
 
         } catch (error) {
             console.log(error)
@@ -80,9 +86,10 @@ class blogController {
         try {
             //console.log(req.params.id)
             const data = await BlogModel.findById(req.params.id)
+            const { role } = req.admin
             //console.log(data)
 
-            res.render('admin/blog/edit', { edit: data })
+            res.render('admin/blog/edit', { edit: data, role: role })
 
         } catch (error) {
             console.log(error)

@@ -1,46 +1,72 @@
-<%- include('../header.ejs')  %>
+<%- include('../header.ejs') %>
 
-<br><br><br><br>
-<section class="dashboard-wrap mtb-40">
-    <div class="container">
-        <div class="body-content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="dash-left">
-                        <ul >
-                            <li class="active ">
-                                <a href="/admin/dashboard" class="text-decoration-none">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <a href="/admin/blogdisplay" class="text-decoration-none">Display Blog</a>
-                            </li>
-                            <li class="active">
-                                <a href="/admin/category" class="text-decoration-none">Categories</a>
-                            </li>
-                            <li class="active">
-                                <a href="/admin/contact" class="text-decoration-none">Contact</a>
-                            </li>
-                            <li class="active">
-                                <a href="/admin/about" class="text-decoration-none">About</a>
-                            </li>
-                            <li class="active">
-                                <a href="/logout" class="text-decoration-none">Logout</a>
-                            </li>
-                        </ul>
+    <br><br><br><br>
+    <section class="dashboard-wrap mtb-40">
+        <div class="container">
+            <div class="body-content ">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="dash-left text-center ">
+                            <ul>
+                                <% if(role=="admin" ) { %>
+                                    <li class="active bg-dark ">
+                                        <a href="/admin/dashboard" class="text-decoration-none text-white">Dashboard</a>
+                                    </li>
+                                    <li class="active bg-dark">
+                                        <a href="/admin/blogdisplay" class="text-decoration-none text-white">Display
+                                            Blog</a>
+                                    </li>
+                                    <li class="active bg-dark">
+                                        <a href="/admin/category" class="text-decoration-none text-white">Categories</a>
+                                    </li>
+                                    <li class="active bg-dark">
+                                        <a href="/admin/contact" class="text-decoration-none text-white">Contact</a>
+                                    </li>
+                                    <li class="active bg-dark">
+                                        <a href="/admin/User" class="text-decoration-none text-white">User</a>
+                                    </li>
+                                    <li class="active bg-dark">
+                                        <a href="/admin/about" class="text-decoration-none text-white">About</a>
+                                    </li>
+                                    <li class="active bg-dark">
+                                        <a href="/logout" class="text-decoration-none text-white">Logout</a>
+                                    </li>
+                                    <% }else{ %>
+                                        <li class="active bg-dark ">
+                                            <a href="/admin/dashboard"
+                                                class="text-decoration-none text-white">Dashboard</a>
+                                        </li>
+                                        <li class="active bg-dark">
+                                            <a href="/admin/blogdisplay" class="text-decoration-none text-white">Display
+                                                Blog</a>
+                                        </li>
+                                        <li class="active bg-dark">
+                                            <a href="/admin/category"
+                                                class="text-decoration-none text-white">Categories</a>
+                                        </li>
+                                        <li class="active bg-dark">
+                                            <a href="/logout" class="text-decoration-none text-white">Logout</a>
+                                        </li>
+                                        <% } %>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="dash-right">
-                        <h1>Welcome, <%= n %> </h1>
-                        <h3>Your, <%= e %> </h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae magni minima distinctio asperiores animi laborum aperiam nihil assumenda temporibus illum atque labore ut eum neque recusandae quae, eveniet aspernatur possimus.</p>
+                    <div class="col-md-9">
+                        <div class="dash-right">
+                            <h1>Welcome, <%= n %>
+                            </h1>
+                            <h3>Your, <%= e %>
+                            </h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae magni minima distinctio
+                                asperiores animi laborum aperiam nihil assumenda temporibus illum atque labore ut eum
+                                neque recusandae quae, eveniet aspernatur possimus.</p>
+                        </div>
                     </div>
-                </div>
-            </div><!--row end-->
-        </div>
-    </div><!--container end-->
-</section>
+                </div><!--row end-->
+            </div>
+        </div><!--container end-->
+    </section>
 
 
 
-<%- include('../footer.ejs')  %>
+    <%- include('../footer.ejs') %>

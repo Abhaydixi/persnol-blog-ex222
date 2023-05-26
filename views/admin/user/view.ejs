@@ -1,0 +1,88 @@
+<%- include('../../header.ejs') %>
+
+    <br><br><br>
+
+    <section class="dashboard-wrap mtb-40">
+        <div class="container">
+            <div class="body-content">
+                <div class="row">
+                    <!--sidebar-->
+                    <div class="col-md-3">
+                        <div class="dash-left text-center">
+                            <ul>
+                                <li class="active bg-dark ">
+                                    <a href="/admin/dashboard" class="text-decoration-none text-white">Dashboard</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/blogdisplay" class="text-decoration-none text-white">Display
+                                        Blog</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/category" class="text-decoration-none text-white">Categories</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/contact" class="text-decoration-none text-white">Contact</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/User" class="text-decoration-none text-white">User</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/admin/about" class="text-decoration-none text-white">About</a>
+                                </li>
+                                <li class="active bg-dark">
+                                    <a href="/logout" class="text-decoration-none text-white">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="dash-right">
+                            <div class="dash-header">
+                                <div class="dash-title">
+                                    <h1 style="color: #386576;">User Display</h1>
+                                </div>
+
+                            </div>
+                            <table class="table-bordered table-striped">
+                                <tbody>
+                                    <tr class=" table_heading text-white text-center">
+                                        <th>ID No.</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <% i=1 %>
+                                        <tr>
+                                            <td>
+                                                <%= i++ %>
+                                            </td>
+
+                                            <td>
+                                                <%= view.name %>
+                                            </td>
+
+                                            <td>
+                                                <%= view.email %>
+                                            </td>
+
+                                            <td>
+                                                <%= view.phone %>
+                                            </td>
+                                            <td>
+                                                <%= view.status %>
+                                            </td>
+                                        </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div><!--row end-->
+            </div>
+        </div><!--container end-->
+    </section>
+
+    <%- include('../../footer.ejs') %>

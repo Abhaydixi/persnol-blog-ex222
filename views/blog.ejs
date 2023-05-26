@@ -1,44 +1,31 @@
-<%- include('header.ejs')  %>
+<%- include('header.ejs') %>
 
-<br><br><br>
-<section class="featured-blog mtb-40">
-    <div class="container">
-        <div class="row">
-            <h1 class="text-center mb-5" style="color: #386576;">BLOGS</h1>
-            <div class="col-md-4">
-                <div class="blog-box">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKvP1olFql_0uBBpLOd9kOTe3Ky96qNwb8BUiHa0G&s"
-                        width="350px" height="250px">
-                        <h3>Developer</h3>
-                        <p>11/09/2022</p>
-                        <p>Full Stack</p>
-                        <a href="" class="btn btn-danger">Read more...</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="blog-box">
-                    <img src="https://www.howtogeek.com/wp-content/uploads/2022/08/github_hero_2.jpg?height=200p&trim=2,2,2,2"
-                        width="350px" height="250px">
-                        <h3>Rudra</h3>
-                        <p>11/10/2022</p>
-                        <p>Hello Rudra</p>
-                        <a href="" class="btn btn-danger">Read more...</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="blog-box">
-                    <img src="images/abhay.jpg"
-                        width="350px" height="250px">
-                        <h3>Full Stack Developer</h3>
-                        <p>01/01/2023</p>
-                        <p>Mean Developer</p>
-                        <a href="" class="btn btn-danger">Read more...</a>
-                </div>
-            </div>
-        </div><!--row end-->
-    </div><!--container end-->
-</section>
+    <br><br><br>
+    <section class="featured-blog mtb-40">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center mb-5" style="color: #386576;">BLOGS</h1>
+                <% b.forEach((item)=>{ %>
+                    <div class="col-md-4">
+                        <div class="blog-box">
+                            <img src="<%= item.image.url %>" width="350px" height="250px">
+                            <h3>
+                                <%= item.title %>
+                            </h3>
+                            <p><span>
+                                    <%= item.createdAt.toLocaleDateString() %>
+                                </span></p>
+                            <p>
+                                <%= item.description.slice(0,10) %>
+                            </p>
+                            <a href="/readmore/<%- item.id %>" class="btn btn-info mt-3">Read more...</a>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div><!--row end-->
+        </div><!--container end-->
+    </section>
 
 
 
-<%- include('footer.ejs')  %>
+    <%- include('footer.ejs') %>
