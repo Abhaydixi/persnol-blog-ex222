@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 
 const url = "mongodb://127.0.0.1:27017/persnolblogex"
-//const live_URL = "mongodb+srv://dixitabhay633:abhay123@cluster0.plszbvy.mongodb.net/persnolblogex?retryWrites=true&w=majority"
+const live_URL = 'mongodb+srv://dixitabhay633:blogproject123@cluster0.axc8e4t.mongodb.net/blogproject?retryWrites=true&w=majority'
 
 const connectDb = () => {
-    return mongoose.connect(url)
+    return mongoose.connect(live_URL)
 
 
 
