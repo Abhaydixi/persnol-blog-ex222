@@ -15,11 +15,13 @@ class blogController {
     static displayBlog = async (req, res) => {
 
         try {
+            const { role, id } = req.admin;
 
             const data = await BlogModel.find({ admin_id: req.admin.id });
             const result = await BlogModel.find();
-            const { role, id } = req.admin;
+
             //console.log(data)
+            //console.log(result)
 
             res.render('admin/blog/display', { d: data, role: role, r: result });
 

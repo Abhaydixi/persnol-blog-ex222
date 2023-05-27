@@ -87,9 +87,10 @@ class adminController {
     static user = async (req, res) => {
         try {
             //console.log("user")
+            const { name, email, role } = req.admin;
             const data = await AdminModel.find();
 
-            res.render('admin/user/user', { d: data });
+            res.render('admin/user/user', { n: name, e: email, d: data, role: role });
 
         } catch (error) {
             console.log(error)
