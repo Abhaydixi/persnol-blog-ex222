@@ -25,10 +25,10 @@ router.get('/user', auth, adminController.userdisplay)
 router.post('/adminregister', adminController.register)
 router.post('/verifylogin', adminController.verifylogin)
 router.get('/logout', adminController.logout)
-router.get('/admin/User', adminController.user)
-router.get('/admin/view/:id', adminController.view)
-router.get('/admin/delete/:id', adminController.delete)
-router.post('/admin/approved/:id', adminController.approved)
+router.get('/admin/User', auth, adminController.user)
+router.get('/admin/view/:id', auth, adminController.view)
+router.get('/admin/delete/:id', auth, adminController.delete)
+router.post('/admin/approved/:id', auth, adminController.approved)
 
 
 //blog controller
